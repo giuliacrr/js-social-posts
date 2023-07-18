@@ -63,7 +63,14 @@ posts.forEach(singlePost => {
     console.log(singlePost);
     console.log("The names of the users");
     console.log(singlePost.author.name);
+
     //Print in HTML
+    //If the image of the user is missing, it will be replaced by an anonymous user image such as the following:
+    //(see user id#3 as example)
+    if (singlePost.author.image === null) {
+        singlePost.author.image = `https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png`;
+    }
+    //print
     postsContainer.innerHTML += `
     <div class="post">
         <div class="post__header">
