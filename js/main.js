@@ -99,6 +99,7 @@ posts.forEach(singlePost => {
 });
 
 //Add and remove likes from the like counter
+let likeCounter = [];
 posts.forEach((obj, i) => {
     let like = document.querySelectorAll(".like-button");
     like[i].addEventListener("click", function () {
@@ -108,9 +109,12 @@ posts.forEach((obj, i) => {
         if (addRevLike === true) {
             let addlike = document.querySelectorAll("#like-counter-1");
             addlike[i].innerHTML = (obj.likes + 1);
+            likeCounter.push(obj.id);
         } else {
             let addlike = document.querySelectorAll("#like-counter-1");
             addlike[i].innerHTML = obj.likes;
+            //likeCounter.splice(obj.id); How to remove from array the element of that specific obj.id?
         }
+        console.log(likeCounter);
     })
 })
