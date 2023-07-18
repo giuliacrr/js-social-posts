@@ -84,7 +84,7 @@ posts.forEach(singlePost => {
         <div class="post__footer">
             <div class="likes js-likes">
             <div class="likes__cta">
-                <a class="like-button  js-like-button" href="#" data-postid="1">
+                <a class="like-button  js-like-button" href="javascript:;" data-postid="1">
                 <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                 <span class="like-button__label">Mi Piace</span>
                 </a>
@@ -97,3 +97,20 @@ posts.forEach(singlePost => {
     </div>
 `
 });
+
+//Add and remove likes from the like counter
+posts.forEach((obj, i) => {
+    let like = document.querySelectorAll(".like-button");
+    like[i].addEventListener("click", function () {
+        console.log(i);
+        const addRevLike = like[i].classList.toggle("like-button--liked");
+        console.log(addRevLike);
+        if (addRevLike === true) {
+            let addlike = document.querySelectorAll("#like-counter-1");
+            addlike[i].innerHTML = (obj.likes + 1);
+        } else {
+            let addlike = document.querySelectorAll("#like-counter-1");
+            addlike[i].innerHTML = obj.likes;
+        }
+    })
+})
