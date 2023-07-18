@@ -80,7 +80,7 @@ posts.forEach(singlePost => {
             </div>
             <div class="post-meta__data">
                 <div class="post-meta__author">${singlePost.author.name}</div>
-                <div class="post-meta__time">4 mesi fa</div>
+                <div class="post-meta__time">4 ore fa</div>
             </div>
             </div>
         </div>

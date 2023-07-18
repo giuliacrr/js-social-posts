@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #055c88;
+    background-color: #7e001f;
     color: #050505;
     font-size: 100%;
 }
@@ -127,6 +127,6 @@ h1 {
 }
 
 .like-button--liked {
-    color: #098cce;
+    color: #f9013d;
     cursor: default;
 }
